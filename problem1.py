@@ -9,11 +9,4 @@ def multiple_sum ( n, m ):
         num += n
     return sum
 
-def problem1 ( n, m ):
-    sum = 0
-    for x in n:
-        sum += multiple_sum(x, m)
-    return sum
-
-x = multiple_sum(3, 1000) + multiple_sum(5, 1000) - multiple_sum(15,1000)
-print x
+print  multiple_sum(3, 1000) + multiple_sum(5, 1000) - multiple_sum(15,1000)
