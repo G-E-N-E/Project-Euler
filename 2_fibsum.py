@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+"""Find the sum of all the multiples of 3 or 5 below 1000"""
+
+r5 = 5**(0.5)
+gr = (1 + r5) / 2
+
+def fib( n ):
+    return round((gr**n)/r5)
+
+def problem2( limit ):
+    n = 6
+    sum = 2
+    while True:
+        fn = fib( n )
+        if ( fn <= limit ):
+            sum += fn
+            n += 3
+        else:
+            break
+    return sum
+
+print problem2( 4000000 )
